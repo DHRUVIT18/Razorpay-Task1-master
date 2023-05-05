@@ -19,7 +19,10 @@ exports.getPayment = (req, res) => {
         if (err) {
             console.error(err);
         }
-        res.json({ message: "payment get succussfully", payments });
         console.log(payments);
+       return res.status(201).send({ message: "payment get succussfully", payments });
     });
+
+
+
 }
