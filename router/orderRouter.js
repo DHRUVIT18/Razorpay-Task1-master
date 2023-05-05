@@ -1,7 +1,7 @@
 const express = require('express');
 const { createOrder } = require('../controller/createOrder');
 const { getOrder } = require('../controller/getOrders');
-const { getPayment } = require('../controller/getpayment');
+const { getPayment } = require('../controller/getPayment');
 
 
 
