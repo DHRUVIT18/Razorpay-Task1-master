@@ -24,7 +24,7 @@ exports.usercreate = async (req, res) => {
             throw new Error("space is not required.fill up email.")
         } else if (!/^[a-z0-9]+(([._-]?[a-z0-9]+)+)?@[a-z]{2,5}.[[a-z]{2,5}]*$/.test(email)) {
             throw new Error("email is a not valid.......")
-        }
+        }  
 
         const olduser = await User.findOne({ email });
         // console.log(".....", olduser)

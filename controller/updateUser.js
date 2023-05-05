@@ -1,6 +1,8 @@
 const User = require("../model/user");
 
-exports.updateUser = (req, res) => {
+exports.updateUser = async(req, res) => {
+    
+
     const id = req.params.id;
 
     User.findByIdAndUpdate(id, req.body)
@@ -16,4 +18,5 @@ exports.updateUser = (req, res) => {
                 message: "Error updating User with id=" + id
             });
         });
+        res.status(201).send("ok");
 }
